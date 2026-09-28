@@ -1,0 +1,787 @@
+/* ================================
+   DESIGN SYSTEM
+================================ */
+
+:root {
+    /* Cores */
+    --cor-primaria: #4CAF50;
+    --cor-secundaria: #FF9800;
+    --cor-destaque: #FFC107;
+    --cor-apoio: #2196F3;
+
+    --cor-sucesso: #28A745;
+    --cor-erro: #E53935;
+    --cor-alerta: #FF9800;
+
+    --cor-texto: #333333;
+    --cor-fundo: #FFFFFF;
+    --cor-superficie: #F2F2F2;
+    --cor-borda: #CCCCCC;
+
+    /* Tipografia */
+    --fonte-titulo: 36px;
+    --fonte-subtitulo: 28px;
+    --fonte-h3: 22px;
+    --fonte-texto: 16px;
+    --fonte-pequena: 14px;
+
+    /* Espaçamentos */
+    --espaco-1: 4px;
+    --espaco-2: 8px;
+    --espaco-3: 16px;
+    --espaco-4: 24px;
+    --espaco-5: 32px;
+    --espaco-6: 48px;
+    --espaco-7: 64px;
+
+    /* Outros */
+    --raio: 10px;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 5%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: var(--sombra);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.logo-area h1 {
+    font-size: 22px;
+}
+
+
+/* ================================
+   MENU
+================================ */
+
+nav ul {
+    list-style: none;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a,
+.dropdown > button {
+    color: white;
+
+    text-decoration: none;
+
+    background: transparent;
+    border: none;
+
+    padding: 10px 12px;
+
+    font-size: 16px;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+nav a:hover,
+.dropdown > button:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+
+/* ================================
+   DROPDOWN
+================================ */
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 180px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    box-shadow: var(--sombra);
+
+    padding: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+}
+
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    display: block;
+
+    color: var(--cor-texto);
+
+    width: 100%;
+}
+
+.submenu a:hover {
+    background-color: var(--cor-superficie);
+}
+
+
+/* ================================
+   BOTÃO MENU MOBILE
+================================ */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    color: white;
+
+    border: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   CONTEÚDO PRINCIPAL
+================================ */
+
+main {
+    min-height: 70vh;
+}
+
+section {
+    padding: var(--espaco-7) 5%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   TÍTULOS
+================================ */
+
+h2 {
+    color: var(--cor-primaria);
+
+    font-size: var(--fonte-subtitulo);
+
+    margin-bottom: var(--espaco-3);
+
+    text-align: center;
+}
+
+h3 {
+    font-size: var(--fonte-h3);
+
+    margin-bottom: var(--espaco-2);
+
+    color: var(--cor-primaria);
+}
+
+p {
+    font-size: var(--fonte-texto);
+
+    margin-bottom: var(--espaco-3);
+}
+
+
+/* ================================
+   HERO / INÍCIO
+================================ */
+
+.hero {
+    text-align: center;
+
+    background-color: var(--cor-superficie);
+
+    padding: 70px 5%;
+}
+
+.hero h2 {
+    font-size: var(--fonte-titulo);
+
+    color: var(--cor-primaria);
+}
+
+.hero p {
+    max-width: 700px;
+
+    margin: 0 auto 24px;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 700px;
+
+    max-height: 400px;
+
+    object-fit: cover;
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+.botao {
+    display: inline-block;
+
+    background-color: var(--cor-primaria);
+
+    color: white;
+
+    text-decoration: none;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.botao:hover {
+    background-color: #388E3C;
+
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background-color: var(--cor-secundaria);
+}
+
+.botao-secundario:hover {
+    background-color: #F57C00;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--espaco-4);
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+}
+
+.card {
+    background-color: white;
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: var(--raio);
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: var(--espaco-4);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   SOBRE
+================================ */
+
+.sobre {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ================================
+   FORMULÁRIO
+================================ */
+
+.formulario {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    background-color: var(--cor-superficie);
+
+    padding: var(--espaco-5);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+}
+
+.grupo-formulario {
+    margin-bottom: var(--espaco-3);
+}
+
+.grupo-formulario label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea,
+.grupo-formulario select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+.grupo-formulario textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus,
+.grupo-formulario select:focus {
+    outline: 2px solid var(--cor-apoio);
+
+    border-color: var(--cor-apoio);
+}
+
+
+/* ================================
+   VALIDAÇÃO
+================================ */
+
+.campo-valido {
+    border: 2px solid var(--cor-sucesso) !important;
+
+    background-color: #F0FFF4;
+}
+
+.campo-invalido {
+    border: 2px solid var(--cor-erro) !important;
+
+    background-color: #FFF5F5;
+}
+
+.mensagem-erro {
+    display: block;
+
+    color: var(--cor-erro);
+
+    font-size: var(--fonte-pequena);
+
+    margin-top: 4px;
+}
+
+
+/* ================================
+   CONTATO
+================================ */
+
+.contato {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.contato-item {
+    background-color: var(--cor-superficie);
+
+    padding: 20px;
+
+    margin: 15px 0;
+
+    border-radius: var(--raio);
+}
+
+
+/* ================================
+   GRÁFICO
+================================ */
+
+.grafico-container {
+    max-width: 800px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* ================================
+   BADGES
+================================ */
+
+.badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.badge-sucesso {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+.badge-alerta {
+    background-color: #FFF3CD;
+    color: #856404;
+}
+
+
+/* ================================
+   ALERTA
+================================ */
+
+.alerta {
+    padding: 15px;
+
+    margin: 20px 0;
+
+    border-radius: 8px;
+
+    background-color: #FFF3CD;
+
+    border-left: 5px solid var(--cor-alerta);
+}
+
+
+/* ================================
+   TOAST
+================================ */
+
+.toast {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    background-color: var(--cor-sucesso);
+
+    color: white;
+
+    padding: 15px 20px;
+
+    border-radius: 8px;
+
+    box-shadow: var(--sombra);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: 0.3s;
+
+    z-index: 2000;
+}
+
+.toast.mostrar {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* ================================
+   RODAPÉ
+================================ */
+
+.rodape {
+    background-color: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 5%;
+
+    margin-top: 30px;
+}
+
+.rodape p {
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cabecalho {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Celulares */
+@media (max-width: 700px) {
+
+    .cabecalho {
+        position: relative;
+    }
+
+    .logo-area h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav > ul {
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+
+        margin-top: 15px;
+    }
+
+    nav > ul.menu-aberto {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a,
+    .dropdown > button {
+        display: block;
+
+        width: 100%;
+
+        text-align: left;
+    }
+
+    .submenu {
+        position: static;
+
+        width: 100%;
+
+        box-shadow: none;
+
+        background-color: rgba(0, 0, 0, 0.08);
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        display: none;
+    }
+
+    .dropdown:focus-within .submenu,
+    .dropdown:hover .submenu {
+        display: block;
+    }
+
+    .submenu a {
+        color: white;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+}
+
+
+/* Celulares pequenos */
+@media (max-width: 450px) {
+
+    .logo-area h1 {
+        font-size: 15px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .botao {
+        width: 100%;
+
+        text-align: center;
+    }
+}

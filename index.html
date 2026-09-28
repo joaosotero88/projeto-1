@@ -1,0 +1,118 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anjinhos de 4 Patas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="logo-area">
+            <img 
+                src="imagens/logo.jpeg" 
+                alt="Logo Anjinhos de 4 Patas" 
+                class="logo"
+            >
+
+            <h1>ANJINHOS DE 4 PATAS</h1>
+        </div>
+
+        <button 
+            class="menu-toggle" 
+            id="menuToggle"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+        <nav>
+            <ul id="menu">
+
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+
+                <li>
+                    <a href="#sobre">Sobre nós</a>
+                </li>
+
+                <li>
+                    <a href="#animais">Animais</a>
+                </li>
+
+                <li class="dropdown">
+
+                    <button type="button">
+                        Como Ajudar ▾
+                    </button>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="#adocao">Adote</a>
+                        </li>
+
+                        <li>
+                            <a href="#doe">Doe</a>
+                        </li>
+
+                        <li>
+                            <a href="#voluntario">Seja Voluntário</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+
+                <li>
+                    <a href="#cadastro">Cadastro</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main id="app"></main>
+
+
+    <footer class="rodape">
+
+        <p>
+            © 2026 Anjinhos de 4 Patas
+        </p>
+
+        <p>
+            Vamos mudar e transformar vidas.
+        </p>
+
+        <p>
+            E-mail: anjinhosde4patas@hotmail.com
+        </p>
+
+    </footer>
+
+
+    <div id="toast" class="toast"></div>
+
+
+    <!-- Biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript principal -->
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
+```
