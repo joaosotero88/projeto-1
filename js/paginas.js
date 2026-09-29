@@ -17,7 +17,7 @@ export function mostrarInicio(app, criarGrafico) {
             </p>
 
             <img
-                src="/public/imagens/cachorro.jpeg"
+                src="/imagens/cachorro.jpeg"
                 alt="Cachorro esperando por um lar"
             >
 
@@ -49,7 +49,7 @@ export function mostrarInicio(app, criarGrafico) {
                     <article class="card">
 
                         <img
-                            src="/public/imagens/pastor.jpeg"
+                            src="/imagens/pastor.jpeg"
                             alt="Cachorro para adoção"
                         >
 
@@ -70,7 +70,7 @@ export function mostrarInicio(app, criarGrafico) {
                     <article class="card">
 
                         <img
-                               src="/public/imagens/luna.jpeg"
+                            src="/imagens/luna.jpeg"
                             alt="Luna"
                         >
 
@@ -92,8 +92,8 @@ export function mostrarInicio(app, criarGrafico) {
                     <article class="card">
 
                         <img
-                            src="/public/imagens/thor.jpeg"
-                            alt="Thor"
+    src="/imagens/thor.jpeg"
+    alt="Thor"
                         >
 
                         <div class="card-conteudo">
@@ -216,7 +216,7 @@ export function mostrarAnimais(app) {
                     <article class="card">
 
                         <img
-                           src="/public/imagens/luna.jpeg"
+                           src="/imagens/luna.jpeg"
                             alt="Luna disponível para adoção"
                         >
 
@@ -248,7 +248,7 @@ export function mostrarAnimais(app) {
                     <article class="card">
 
                         <img
-                            src="/public/imagens/thor.jpeg"
+                            src="/imagens/thor.jpeg"
                             alt="Thor disponível para adoção"
                         >
 
@@ -280,7 +280,7 @@ export function mostrarAnimais(app) {
                     <article class="card">
 
                         <img
-                          src="/public/imagens/pastor.jpeg"
+                          src="/imagens/pastor.jpeg"
                             alt="Cachorro disponível para adoção"
                         >
 
@@ -341,7 +341,7 @@ export function mostrarAdocao(app) {
                     <article class="card">
 
                         <img
-                            src="/public/imagens/luna.jpeg"
+                            src="/imagens/luna.jpeg"
                             alt="Luna"
                         >
 
@@ -369,7 +369,7 @@ export function mostrarAdocao(app) {
                     <article class="card">
 
                         <img
-                            src="/public/imagens/thor.jpeg"
+                            src="/imagens/thor.jpeg"
                             alt="Thor"
                         >
 
