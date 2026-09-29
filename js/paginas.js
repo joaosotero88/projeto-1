@@ -17,7 +17,7 @@ export function mostrarInicio(app, criarGrafico) {
             </p>
 
             <img
-                src="../imagens/cachorro.jpeg"
+                src="/public/imagens/cachorro.jpeg"
                 alt="Cachorro esperando por um lar"
             >
 
@@ -49,7 +49,7 @@ export function mostrarInicio(app, criarGrafico) {
                     <article class="card">
 
                         <img
-                            src="../imagens/pastor.jpeg"
+                            src="/public/imagens/pastor.jpeg"
                             alt="Cachorro para adoção"
                         >
 
@@ -70,7 +70,7 @@ export function mostrarInicio(app, criarGrafico) {
                     <article class="card">
 
                         <img
-                            src="../imagens/luna.jpeg"
+                               src="/public/imagens/luna.jpeg"
                             alt="Luna"
                         >
 
@@ -92,7 +92,7 @@ export function mostrarInicio(app, criarGrafico) {
                     <article class="card">
 
                         <img
-                            src="../imagens/thor.jpeg"
+                            src="/public/imagens/thor.jpeg"
                             alt="Thor"
                         >
 
@@ -181,10 +181,9 @@ export function mostrarSobre(app) {
                 </div>
 
 
-             <a href="#adocao" class="botao">Como ajudar</a>
-                    Como ajudar
-                </a>
-
+            <a href="#adocao" class="botao">
+    Como ajudar
+</a>
             </div>
 
         </section>
@@ -217,7 +216,7 @@ export function mostrarAnimais(app) {
                     <article class="card">
 
                         <img
-                            src="imagens/luna.jpeg"
+                           src="/public/imagens/luna.jpeg"
                             alt="Luna disponível para adoção"
                         >
 
@@ -249,7 +248,7 @@ export function mostrarAnimais(app) {
                     <article class="card">
 
                         <img
-                            src="imagens/thor.jpeg"
+                            src="/public/imagens/thor.jpeg"
                             alt="Thor disponível para adoção"
                         >
 
@@ -281,7 +280,7 @@ export function mostrarAnimais(app) {
                     <article class="card">
 
                         <img
-                            src="imagens/pastor.jpeg"
+                          src="/public/imagens/pastor.jpeg"
                             alt="Cachorro disponível para adoção"
                         >
 
@@ -342,7 +341,7 @@ export function mostrarAdocao(app) {
                     <article class="card">
 
                         <img
-                            src="imagens/luna.jpeg"
+                            src="/public/imagens/luna.jpeg"
                             alt="Luna"
                         >
 
@@ -370,7 +369,7 @@ export function mostrarAdocao(app) {
                     <article class="card">
 
                         <img
-                            src="imagens/thor.jpeg"
+                            src="/public/imagens/thor.jpeg"
                             alt="Thor"
                         >
 
